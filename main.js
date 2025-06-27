@@ -1,4 +1,4 @@
-// Improved: Navbar transitions in on scroll up, out on scroll down
+// Navbar appears at the top when scrolling up, hides when scrolling down
 (function() {
     let lastScroll = window.scrollY;
     const navbar = document.getElementById('main-navbar');
