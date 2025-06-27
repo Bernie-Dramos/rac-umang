@@ -10,9 +10,13 @@
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Navbar -->
-    <nav class="bg-blue-800 text-white fixed w-full z-10">
+    <nav id="main-navbar" class="bg-black text-white w-full z-10 transition-transform duration-300">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Rotaract Club Umang</h1>
+            <div class="flex items-center space-x-3">
+                <!-- Optional Logo: Replace 'logo.png' with your logo file -->
+                <img src="assets\rotary-logo.png" alt="Rotary Logo" class="h-10 w-10 object-contain" />
+                <h1 class="text-2xl font-bold navbar-title">Rotaract Club of Umang</h1>
+            </div>
             <ul class="flex space-x-6">
                 <li><a href="#home" class="hover:text-blue-300">Home</a></li>
                 <li><a href="#about" class="hover:text-blue-300">About</a></li>
@@ -25,8 +29,24 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1600x900?community')">
-        <div class="text-center text-white bg-black bg-opacity-50 p-8 rounded">
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden mt-8 md:mt-12">
+        <!-- 12-image grid background -->
+        <div class="absolute inset-0 w-full h-full grid grid-cols-3 md:grid-cols-4 gap-0 z-0">
+            <img src="assets/hero1.jpg" alt="Hero 1" class="w-full h-full object-cover" />
+            <img src="assets/hero2.jpg" alt="Hero 2" class="w-full h-full object-cover" />
+            <img src="assets/hero3.jpg" alt="Hero 3" class="w-full h-full object-cover" />
+            <img src="assets/hero4.jpg" alt="Hero 4" class="w-full h-full object-cover" />
+            <img src="assets/hero5.jpg" alt="Hero 5" class="w-full h-full object-cover" />
+            <img src="assets/hero6.jpg" alt="Hero 6" class="w-full h-full object-cover" />
+            <img src="assets/hero7.jpg" alt="Hero 7" class="w-full h-full object-cover" />
+            <img src="assets/hero8.jpg" alt="Hero 8" class="w-full h-full object-cover" />
+            <img src="assets/hero9.jpg" alt="Hero 9" class="w-full h-full object-cover" />
+            <img src="assets/hero10.jpg" alt="Hero 10" class="w-full h-full object-cover" />
+            <img src="assets/hero11.jpg" alt="Hero 11" class="w-full h-full object-cover" />
+            <img src="assets/hero12.jpg" alt="Hero 12" class="w-full h-full object-cover" />
+        </div>
+        <!-- Black overlay for text -->
+        <div class="relative z-10 text-center text-white bg-black bg-opacity-50 p-8 rounded" style="top: -75px; position: relative;">
             <h2 class="text-4xl font-bold mb-4">Welcome to the Rotaract Club of Umang</h2>
             <p class="text-lg mb-6">Empowering communities, inspiring change, and fostering leadership.</p>
         </div>
@@ -100,39 +120,65 @@
             <h2 class="text-3xl font-bold text-center mt-16 mb-8">Core Council</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">[Member Name]</p>
-                    <p class="text-gray-600">[Position]</p>
+                    <p class="font-semibold">Lennox Galanje</p>
+                    <p class="text-gray-600">Creativity Chair & PR</p>
                 </div>
                 <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">[Member Name]</p>
-                    <p class="text-gray-600">[Position]</p>
+                    <p class="font-semibold">Winnee Patrick</p>
+                    <p class="text-gray-600">Community Service Director</p>
                 </div>
                 <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">[Member Name]</p>
-                    <p class="text-gray-600">[Position]</p>
-                </div>
-                <!-- Add more boxes as needed -->
-            </div>
-            <!-- Our Members Section -->
-            <h3 class="text-xl font-semibold text-center mt-16 mb-8">Our Members</h3>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">[Member Name]</p>
-                    <p class="text-gray-600">[Position]</p>
+                    <p class="font-semibold">Victor Abraham</p>
+                    <p class="text-gray-600">Membership Chair</p>
                 </div>
                 <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">[Member Name]</p>
-                    <p class="text-gray-600">[Position]</p>
+                    <p class="font-semibold">Norbert Ayume</p>
+                    <p class="text-gray-600">Sergeant-At-Arms</p>
                 </div>
                 <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">[Member Name]</p>
-                    <p class="text-gray-600">[Position]</p>
+                    <p class="font-semibold">Eddidiong Iseh</p>
+                    <p class="text-gray-600">International Service Director</p>
                 </div>
                 <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">[Member Name]</p>
-                    <p class="text-gray-600">[Position]</p>
+                    <p class="font-semibold">Clara Shirima</p>
+                    <p class="text-gray-600">Treasurer</p>
                 </div>
-                <!-- Add more boxes as needed -->
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Paulo Mathayo</p>
+                    <p class="text-gray-600">Vice President</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Parita Bheda</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Mubarak Bashir</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Ibrahim Auwal</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Killian Okoth</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Noella</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Safura Joseph</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Ibrahim Muhammad</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow text-center">
+                    <p class="font-semibold">Albert Nixon</p>
+                    <p class="text-gray-600">General Body Member</p>
+                </div>
             </div>
         </div>
     </section>
@@ -189,13 +235,13 @@
             <h2 class="text-3xl font-bold text-center mb-8">Support Our Cause</h2>
             <p class="text-lg text-gray-700 text-center mb-6">Your donations help us continue our mission to serve and uplift communities. Stay tuned for more details on how to contribute!</p>
             <div class="text-center">
-                <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Donate Now</a>
+                <a href="#" class="text-white px-6 py-3 rounded hover:bg-pink-700" style="background-color: #D51067;">Donate Now</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-800 text-white py-8">
+    <footer class="bg-black text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 Rotaract Club of Umang. All rights reserved.</p>
         </div>
