@@ -7,6 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="media-queries.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
     <script src="main.js"></script>
@@ -21,245 +37,93 @@
             <ul class="flex space-x-6">
                 <li><a href="#home" class="hover:text-blue-300">Home</a></li>
                 <li><a href="#about" class="hover:text-blue-300">About</a></li>
-                <li><a href="#members" class="hover:text-blue-300">Members</a></li>
+                <li><a href="members.html" class="hover:text-blue-300">Members</a></li>
                 <li><a href="#projects" class="hover:text-blue-300">Projects</a></li>
-                <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
-                <li><a href="#donate" class="hover:text-blue-300">Donate</a></li>
+                <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden mt-8 md:mt-12">
-        <!-- 12-image grid background -->
-        <div class="absolute inset-0 w-full h-full grid grid-cols-3 md:grid-cols-4 gap-0 z-0">
-            <img src="assets/hero1.jpg" alt="Hero 1" class="w-full h-full object-cover" />
-            <img src="assets/hero2.jpg" alt="Hero 2" class="w-full h-full object-cover" />
-            <img src="assets/hero3.jpg" alt="Hero 3" class="w-full h-full object-cover" />
-            <img src="assets/hero4.jpg" alt="Hero 4" class="w-full h-full object-cover" />
-            <img src="assets/hero5.jpg" alt="Hero 5" class="w-full h-full object-cover" />
-            <img src="assets/hero6.jpg" alt="Hero 6" class="w-full h-full object-cover" />
-            <img src="assets/hero7.jpg" alt="Hero 7" class="w-full h-full object-cover" />
-            <img src="assets/hero8.jpg" alt="Hero 8" class="w-full h-full object-cover" />
-            <img src="assets/hero9.jpg" alt="Hero 9" class="w-full h-full object-cover" />
-            <img src="assets/hero10.jpg" alt="Hero 10" class="w-full h-full object-cover" />
-            <img src="assets/hero11.jpg" alt="Hero 11" class="w-full h-full object-cover" />
-            <img src="assets/hero12.jpg" alt="Hero 12" class="w-full h-full object-cover" />
-        </div>
-        <!-- Black overlay for text -->
-        <div class="relative z-10 text-center text-white bg-black bg-opacity-50 p-8 rounded" style="top: -75px; position: relative;">
-            <h2 class="text-4xl font-bold mb-4">Welcome to the Rotaract Club of Umang</h2>
-            <p class="text-lg mb-6">Empowering communities, inspiring change, and fostering leadership.</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
-            <p class="text-lg text-gray-700 mb-6">Rotaract Club Umang is a vibrant community of young leaders dedicated to service, leadership, and fellowship. We strive to make a positive impact through community projects, professional development, and global connections.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
-                    <p class="text-gray-600">To inspire and empower youth to serve communities and foster sustainable change.</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
-                    <p class="text-gray-600">A world where young leaders create lasting impact through service and collaboration.</p>
-                </div>
-                <div class="text-center">
-                    <h3 class="text-xl font-semibold mb-2">Our Values</h3>
-                    <p class="text-gray-600">Integrity, Service, Leadership, and Fellowship.</p>
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden mt-8 md:mt-12">
+            <!-- 12-image grid background -->
+            <div class="absolute inset-0 w-full h-full grid grid-cols-3 md:grid-cols-4 gap-0 z-0">
+                <img src="assets/hero1.jpg" alt="Hero 1" class="w-full h-full object-cover" />
+                <img src="assets/hero2.jpg" alt="Hero 2" class="w-full h-full object-cover" />
+                <img src="assets/hero3.jpg" alt="Hero 3" class="w-full h-full object-cover" />
+                <img src="assets/hero4.jpg" alt="Hero 4" class="w-full h-full object-cover" />
+                <img src="assets/hero5.jpg" alt="Hero 5" class="w-full h-full object-cover" />
+                <img src="assets/hero6.jpg" alt="Hero 6" class="w-full h-full object-cover" />
+                <img src="assets/hero7.jpg" alt="Hero 7" class="w-full h-full object-cover" />
+                <img src="assets/hero8.jpg" alt="Hero 8" class="w-full h-full object-cover" />
+                <img src="assets/hero9.jpg" alt="Hero 9" class="w-full h-full object-cover" />
+                <img src="assets/hero10.jpg" alt="Hero 10" class="w-full h-full object-cover" />
+                <img src="assets/hero11.jpg" alt="Hero 11" class="w-full h-full object-cover" />
+                <img src="assets/hero12.jpg" alt="Hero 12" class="w-full h-full object-cover" />
             </div>
-        </div>
-    </section>
+            <!-- Black overlay for text -->
+            <div class="relative z-10 text-center text-white bg-black bg-opacity-50 p-8 rounded" style="top: -75px; position: relative;">
+                <h2 class="text-4xl font-bold mb-4">Welcome to the Rotaract Club of Umang</h2>
+                <p class="text-lg mb-6">Empowering communities, inspiring change, and fostering leadership.</p>
+            </div>
+        </section>
 
-    <!-- Members Section -->
-    <section id="members" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Our Leaders</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Past Leadership -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Past Leadership</h3>
-                    <div class="bg-white p-4 rounded shadow">
-                        <p class="font-semibold">Past President: Pal Agrawal</p>
-                        <p class="text-gray-600">Served 2023-2024</p>
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+                <p class="text-lg text-gray-700 mb-6">Rotaract Club Umang is a vibrant community of young leaders dedicated to service, leadership, and fellowship. We strive to make a positive impact through community projects, professional development, and global connections.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+                        <p class="text-gray-600">To inspire and empower youth to serve communities and foster sustainable change.</p>
                     </div>
-                    <div class="bg-white p-4 rounded shadow mt-4">
-                        <p class="font-semibold">Past Secretary: Akansha Jadhav</p>
-                        <p class="text-gray-600">Served 2023-2024</p>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+                        <p class="text-gray-600">A world where young leaders create lasting impact through service and collaboration.</p>
                     </div>
-                </div>
-                <!-- Current Leadership -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Current Leadership</h3>
-                    <div class="bg-white p-4 rounded shadow">
-                        <p class="font-semibold">President: Joseph Geyevu</p>
-                        <p class="text-gray-600">Leading with vision and passion.</p>
-                    </div>
-                    <div class="bg-white p-4 rounded shadow mt-4">
-                        <p class="font-semibold">Secretary: Bernardo Dramos</p>
-                        <p class="text-gray-600">Organizing and driving our initiatives.</p>
-                    </div>
-                </div>
-                <!-- Upcoming Leadership -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Upcoming Leadership</h3>
-                    <div class="bg-white p-4 rounded shadow">
-                        <p class="font-semibold">President-Elect: Winnee Patrick</p>
-                        <p class="text-gray-600">To serve 2025-2026</p>
-                    </div>
-                    <div class="bg-white p-4 rounded shadow mt-4">
-                        <p class="font-semibold">Secretary-Elect: Victor</p>
-                        <p class="text-gray-600">To serve 2025-2026</p>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold mb-2">Our Values</h3>
+                        <p class="text-gray-600">Integrity, Service, Leadership, and Fellowship.</p>
                     </div>
                 </div>
             </div>
-            <!-- Core Council Section -->
-            <h2 class="text-3xl font-bold text-center mt-16 mb-8">Core Council</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Lennox Galanje</p>
-                    <p class="text-gray-600">Creativity Chair & PR</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Winnee Patrick</p>
-                    <p class="text-gray-600">Community Service Director</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Victor Abraham</p>
-                    <p class="text-gray-600">Membership Chair</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Norbert Ayume</p>
-                    <p class="text-gray-600">Sergeant-At-Arms</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Eddidiong Iseh</p>
-                    <p class="text-gray-600">International Service Director</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Clara Shirima</p>
-                    <p class="text-gray-600">Treasurer</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Paulo Mathayo</p>
-                    <p class="text-gray-600">Vice President</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Parita Bheda</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Mubarak Bashir</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Ibrahim Auwal</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Killian Okoth</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Noella</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Safura Joseph</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Ibrahim Muhammad</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow text-center">
-                    <p class="font-semibold">Albert Nixon</p>
-                    <p class="text-gray-600">General Body Member</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Our Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Completed Projects -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Completed Projects</h3>
-                    <div class="bg-gray-100 p-4 rounded shadow">
-                        <p class="font-semibold">Community Health Camp 2024</p>
-                        <p class="text-gray-600">Provided free health checkups to 500+ residents.</p>
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8">Our Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Completed Projects -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Completed Projects</h3>
+                        <div class="bg-gray-100 p-4 rounded shadow">
+                            <p class="font-semibold">Community Health Camp 2024</p>
+                            <p class="text-gray-600">Provided free health checkups to 500+ residents.</p>
+                        </div>
                     </div>
-                </div>
-                <!-- Ongoing Projects -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Ongoing Projects</h3>
-                    <div class="bg-gray-100 p-4 rounded shadow">
-                        <p class="font-semibold">Education for All</p>
-                        <p class="text-gray-600">Supporting literacy programs in local schools.</p>
+                    <!-- Ongoing Projects -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Ongoing Projects</h3>
+                        <div class="bg-gray-100 p-4 rounded shadow">
+                            <p class="font-semibold">Education for All</p>
+                            <p class="text-gray-600">Supporting literacy programs in local schools.</p>
+                        </div>
                     </div>
-                </div>
-                <!-- Upcoming Projects -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4">Upcoming Projects</h3>
-                    <div class="bg-gray-100 p-4 rounded shadow">
-                        <p class="font-semibold">Green Umang 2025</p>
-                        <p class="text-gray-600">Tree planting initiative for environmental sustainability.</p>
+                    <!-- Upcoming Projects -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Upcoming Projects</h3>
+                        <div class="bg-gray-100 p-4 rounded shadow">
+                            <p class="font-semibold">Green Umang 2025</p>
+                            <p class="text-gray-600">Tree planting initiative for environmental sustainability.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
-            <div class="max-w-lg mx-auto space-y-4">
-                <p class="text-lg text-gray-700 mb-4">Reach out to us for inquiries, collaborations, or to join our club!</p>
-                <!-- Club Email -->
-                <div class="flex items-center space-x-3">
-                    <img src="assets\gmail.png" alt="Email" class="h-6 w-6 object-contain" />
-                    <a href="mailto:contact@umangrotaract.org" class="text-blue-700 hover:underline">contact@umangrotaract.org</a>
-                </div>
-                <!-- Instagram -->
-                <div class="flex items-center space-x-3">
-                    <img src="assets\insta.png" alt="Instagram" class="h-6 w-6 object-contain" />
-                    <a href="https://www.instagram.com/rac_umang_nashik?igsh=bmNmdTA0MW5hM2Y1" target="_blank" class="text-blue-700 hover:underline">@rac_umang_nashik</a>
-                </div>
-                <!-- President Contact -->
-                <div class="mt-6">
-                    <p class="font-semibold">President</p>
-                    <p class="text-gray-700">Joseph Geyevu</p>
-                    <p class="text-gray-600">Phone: +91 98765 43210</p>
-                </div>
-                <!-- ISD Contact -->
-                <div class="mt-6">
-                    <p class="font-semibold">International Service Director</p>
-                    <p class="text-gray-700">Eddidiong Iseh</p>
-                    <p class="text-gray-600">Phone: +91 91234 56789</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Donation Section -->
-    <section id="donate" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Support Our Cause</h2>
-            <p class="text-lg text-gray-700 text-center mb-6">Your donations help us continue our mission to serve and uplift communities. Stay tuned for more details on how to contribute!</p>
-            <div class="text-center">
-                <a href="#" class="text-white px-6 py-3 rounded hover:bg-pink-700" style="background-color: #D51067;">Donate Now</a>
-            </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <!-- Footer -->
     <footer class="bg-black text-white py-8">
         <div class="container mx-auto px-4 text-center">
