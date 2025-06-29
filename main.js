@@ -7,10 +7,10 @@
     function onScroll() {
         const currentScroll = window.scrollY;
         if (currentScroll > lastScroll && currentScroll > 50) {
-            // Scrolling down
+            // Scrolling down: hide navbar
             navbar.style.transform = 'translateY(-100%)';
         } else {
-            // Scrolling up
+            // Scrolling up: show navbar
             navbar.style.transform = 'translateY(0)';
         }
         lastScroll = currentScroll;

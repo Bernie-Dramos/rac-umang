@@ -1,4 +1,6 @@
 /* Media Queries for Responsive Design */
+
+/* Large to Medium screens */
 @media (max-width: 1024px) {
     .grid-cols-3 {
         grid-template-columns: 1fr 1fr !important;
@@ -8,6 +10,7 @@
     }
 }
 
+/* Medium to Small screens */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -36,13 +39,13 @@
         grid-template-columns: 1fr !important;
     }
 
-    /* Add spacing between member boxes for stacked layout */
     .bg-white,
     .bg-gray-100 {
         margin-bottom: 1rem;
     }
 }
 
+/* Small screens */
 @media (max-width: 480px) {
     nav h1 {
         font-size: 1.2rem;
