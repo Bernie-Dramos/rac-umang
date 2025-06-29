@@ -59,44 +59,9 @@ footer.footer {
 }
 
 /* === Navbar === */
-.navbar {
-    /* Already styled by Tailwind, add custom if needed */
-}
-.navbar-logo {
-    /* Custom logo styles if needed */
-}
 .navbar-title {
     color: #D51067;
 }
 .navbar-links a {
     transition: color 0.2s;
 }
-
-/* === Hero Section === */
-.hero-section {
-    /* Custom hero section styles if needed */
-}
-.hero-bg img {
-    /* Custom image grid styles if needed */
-}
-.hero-overlay {
-    /* Custom overlay styles if needed */
-}
-
-/* === About Section === */
-.about-section {
-    /* Custom about section styles if needed */
-}
-
-/* === Projects Section === */
-.projects-section {
-    /* Custom projects section styles if needed */
-}
-
-/* === Footer === */
-.footer {
-    /* Already styled by Tailwind, add custom if needed */
-}
-
-/* === Utility/Accessibility === */
-/* Add any other custom styles for other sections/pages here */
