@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Rotaract Club of Umang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media-queries.css">
+</head>
+<body class="bg-gray-100 font-sans page-root">
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar bg-black text-white w-full z-10 transition-transform duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="assets/rotary-logo.png" alt="Rotary Logo" class="navbar-logo h-10 w-10 object-contain" />
+                <h1 class="text-2xl font-bold navbar-title">Rotaract Club of Umang</h1>
+            </div>
+            <ul class="flex space-x-6 navbar-links">
+                <li><a href="index.html#home" class="hover:text-blue-300">Home</a></li>
+                <li><a href="index.html#about" class="hover:text-blue-300">About</a></li>
+                <li><a href="projects.html" class="hover:text-blue-300">Projects</a></li>
+                <li><a href="members.html" class="hover:text-blue-300">Members</a></li>
+                <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8">Our Projects</h2>
+                <div class="flex flex-col gap-8">
+                    <!-- Example Project 1 -->
+                    <div class="flex flex-col md:flex-row bg-gray-100 p-4 rounded shadow items-center">
+                        <div class="flex-shrink-0 w-full md:w-56 mb-4 md:mb-0 md:mr-6">
+                            <img src="assets/projects/health-camp.jpg" alt="Community Health Camp" class="w-full h-80 object-cover rounded bg-gray-300" />
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl mb-2">Community Health Camp 2024</p>
+                            <p class="text-gray-600">A web-based dashboard for real-time analytics, featuring interactive charts and user management.</p>
+                        </div>
+                    </div>
+                    <!-- Example Project 2 -->
+                    <div class="flex flex-col md:flex-row bg-gray-100 p-4 rounded shadow items-center">
+                        <div class="flex-shrink-0 w-full md:w-56 mb-4 md:mb-0 md:mr-6">
+                            <img src="assets/projects/education-for-all.jpg" alt="Education for All" class="w-full h-80 object-cover rounded bg-gray-300" />
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl mb-2">Education for All</p>
+                            <p class="text-gray-600">A cross-platform mobile app for task management, with offline support and push notifications.</p>
+                        </div>
+                    </div>
+                    <!-- Example Project 3 -->
+                    <div class="flex flex-col md:flex-row bg-gray-100 p-4 rounded shadow items-center">
+                        <div class="flex-shrink-0 w-full md:w-56 mb-4 md:mb-0 md:mr-6">
+                            <img src="assets/food-bazaar-poster.jpg" alt="Green Umang" class="w-full h-80 object-cover rounded bg-gray-300" />
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl mb-2">Food Bazaar 2025</p>
+                            <p class="text-gray-600">An e-commerce platform with secure payments, product reviews, and advanced search functionality.</p>
+                        </div>
+                    </div>
+                    <!-- Add more projects as needed, following the same structure -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Rotaract Club of Umang. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
