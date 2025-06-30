@@ -9,6 +9,18 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="media-queries.css">
+    <script>
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', function () {
+                menu.classList.toggle('hidden');
+            });
+        }
+    });
+    </script>
 </head>
 <body class="bg-gray-100 font-sans page-root">
     <!-- Navbar -->
@@ -19,11 +31,27 @@
                 <img src="assets/rotary-logo.png" alt="Rotary Logo" class="navbar-logo h-10 w-10 object-contain" />
                 <h1 class="text-2xl font-bold navbar-title">Rotaract Club of Umang</h1>
             </div>
-            <ul class="flex space-x-6 navbar-links">
+            <!-- Hamburger Button (hidden on md+) -->
+            <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none" aria-label="Open Menu">
+                <span class="block w-7 h-1 bg-white mb-1 rounded"></span>
+                <span class="block w-7 h-1 bg-white mb-1 rounded"></span>
+                <span class="block w-7 h-1 bg-white rounded"></span>
+            </button>
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex space-x-6 navbar-links">
                 <li><a href="#home" class="hover:text-blue-300">Home</a></li>
                 <li><a href="projects.html" class="hover:text-blue-300">Projects</a></li>
                 <li><a href="members.html" class="hover:text-blue-300">Members</a></li>
                 <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black w-full px-4 pb-4">
+            <ul class="flex flex-col space-y-3">
+                <li><a href="#home" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300">Home</a></li>
+                <li><a href="projects.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300">Projects</a></li>
+                <li><a href="members.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300">Members</a></li>
+                <li><a href="contact.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300">Contact</a></li>
             </ul>
         </div>
     </nav>

@@ -24,3 +24,14 @@
         }
     });
 })();
+
+// Hamburger menu toggle for responsive navbar
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+        btn.addEventListener('click', function () {
+            menu.classList.toggle('hidden');
+        });
+    }
+});
