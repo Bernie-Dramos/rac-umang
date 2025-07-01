@@ -45,14 +45,22 @@ a:hover {
 /* === General Layout === */
 html, body {
     height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body.page-root {
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
 }
 main {
     flex: 1 0 auto;
+    min-height: 0;
 }
 footer.footer {
     flex-shrink: 0;
@@ -64,4 +72,15 @@ footer.footer {
 }
 .navbar-links a {
     transition: color 0.2s;
+}
+
+/* Navbar logo and title responsive sizing */
+@media (max-width: 768px) {
+    .navbar-title {
+        font-size: 1.25rem !important; /* h2 size */
+    }
+    .navbar-logo {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
 }

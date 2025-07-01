@@ -3,7 +3,7 @@
 <head>
     <meta name="google-site-verification" content="EsOm1ILAxFrPpBaI3IyUiXSpqjNOhIHcU1VUnGyOr1s"/>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Rotaract Club of Umang</title>
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -11,6 +11,36 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="media-queries.css">
     <link rel="icon" type="image/png" href="assets/rotary-logo.png">
+    <style>
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        #home.hero-section {
+            min-height: 100vh;
+            height: 100vh;
+        }
+        main {
+            min-height: calc(100vh - 64px - 64px); /* adjust if navbar/footer height changes */
+        }
+        @media (max-width: 768px) {
+            #home.hero-section {
+                min-height: 100vh;
+                height: 100vh;
+            }
+            main {
+                min-height: calc(100vh - 56px - 56px);
+            }
+        }
+    </style>
     <script>
     // Hamburger menu toggle
     document.addEventListener('DOMContentLoaded', function () {
@@ -25,7 +55,7 @@
     </script>
     <script defer src="main.js"></script>
 </head>
-<body class="bg-gray-100 font-sans page-root">
+<body class="bg-gray-100 font-sans page-root" style="min-height:100vh;min-width:100vw;">
     <!-- Navbar -->
     <nav id="main-navbar" class="navbar bg-black text-white w-full z-10 transition-transform duration-300">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
@@ -34,23 +64,19 @@
                 <h1 class="text-2xl font-bold navbar-title">Rotaract Club of Umang</h1>
             </div>
             <!-- Hamburger Button (always visible on <=1028px) -->
-            <button id="menu-btn" class="flex flex-col justify-center items-center w-10 h-10 focus:outline-none md:hidden"
+            <button id="menu-btn" class="flex items-center justify-center w-10 h-10 focus:outline-none md:hidden bg-transparent border-none p-0"
                 aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
-                <span class="block w-7 h-1 bg-white mb-1 rounded transition-all"></span>
-                <span class="block w-7 h-1 bg-white mb-1 rounded transition-all"></span>
-                <span class="block w-7 h-1 bg-white rounded transition-all"></span>
+                <img src="assets/menu-btn.png" alt="Menu" class="h-8 w-8 object-contain" />
             </button>
             <!-- Desktop Nav -->
             <ul class="hidden md:flex space-x-6 navbar-links">
-                <li><a href="#home" class="hover:text-blue-300">Home</a></li>
                 <li><a href="projects.html" class="hover:text-blue-300">Projects</a></li>
                 <li><a href="members.html" class="hover:text-blue-300">Members</a></li>
                 <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
             </ul>
-            <!-- Mobile Nav (dropdown, overlays all content) -->
-            <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 rounded-none shadow-none flex-col items-start py-8 px-6 space-y-4 text-lg text-white z-50 transform scale-0 transition-transform duration-200 origin-top-right md:hidden">
-                <button id="close-menu-btn" class="absolute top-4 right-6 text-3xl focus:outline-none" aria-label="Close Menu" type="button">&times;</button>
-                <a href="#home" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Home</a>
+            <!-- Mobile Nav (dropdown, overlays only needed links) -->
+            <div id="mobile-menu" class="absolute top-full right-0 mt-2 w-56 bg-black bg-opacity-95 rounded shadow-lg flex-col items-start py-6 px-6 space-y-2 text-lg text-white z-50 transform scale-0 transition-transform duration-200 origin-top-right md:hidden">
+                <button id="close-menu-btn" class="absolute top-2 right-2 text-2xl focus:outline-none" aria-label="Close Menu" type="button">&times;</button>
                 <a href="projects.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Projects</a>
                 <a href="members.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Members</a>
                 <a href="contact.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Contact</a>
@@ -67,7 +93,7 @@
                 <!-- Overlay for adjustable transparency -->
                 <div class="absolute inset-0 bg-black" style="opacity: 0.45;"></div>
             </div>
-            <div class="hero-overlay relative z-10 text-center text-white p-8 rounded">
+            <div class="hero-overlay relative text-center text-white p-8 rounded" style="z-index:1;">
                 <h2 class="text-4xl font-bold m-0 inline-block bg-blue-700 bg-opacity-80 px-4 py-2 rounded mb-4" style="display:inline-block;">
                     Welcome to the Rotaract Club of Umang
                 </h2>

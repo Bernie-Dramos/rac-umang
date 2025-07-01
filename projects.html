@@ -20,16 +20,13 @@
                 <h1 class="text-2xl font-bold navbar-title">Rotaract Club of Umang</h1>
             </div>
             <!-- Hamburger Button (always visible on <=1028px) -->
-            <button id="menu-btn" class="flex flex-col justify-center items-center w-10 h-10 focus:outline-none md:hidden"
+            <button id="menu-btn" class="flex items-center justify-center w-10 h-10 focus:outline-none md:hidden bg-transparent border-none p-0"
                 aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu" type="button">
-                <span class="block w-7 h-1 bg-white mb-1 rounded transition-all"></span>
-                <span class="block w-7 h-1 bg-white mb-1 rounded transition-all"></span>
-                <span class="block w-7 h-1 bg-white rounded transition-all"></span>
+                <img src="assets/menu-btn.png" alt="Menu" class="h-8 w-8 object-contain" />
             </button>
             <!-- Desktop Nav -->
             <ul class="hidden md:flex space-x-6 navbar-links">
                 <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
-                <li><a href="projects.html" class="hover:text-blue-300">Projects</a></li>
                 <li><a href="members.html" class="hover:text-blue-300">Members</a></li>
                 <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
             </ul>
@@ -37,7 +34,6 @@
             <div id="mobile-menu" class="absolute top-full right-0 mt-2 w-48 bg-black bg-opacity-95 rounded shadow-lg flex-col items-start py-4 px-4 space-y-2 text-base text-white z-50 transform scale-0 transition-transform duration-200 origin-top-right md:hidden">
                 <button id="close-menu-btn" class="absolute top-2 right-2 text-2xl focus:outline-none" aria-label="Close Menu" type="button">&times;</button>
                 <a href="index.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Home</a>
-                <a href="projects.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Projects</a>
                 <a href="members.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Members</a>
                 <a href="contact.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Contact</a>
             </div>
@@ -141,7 +137,7 @@
                         </div>
                     </a>
                     <!-- Example Project 6 (reverse) -->
-                    <a href="https://spc.rotary.org/shareproject?input=JTdCJTIyaW1hZ2UlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnNwYy5yb3Rhcnkub3JnJTJGYXp1cmVJbWFnZXMlMkYxNzQ5NjI1ODE4NjQwTVdZM01ESTNZMll0Wm1KbE9DMDBPVFl3TFdGbU1HWXROamcxT1dFeE0ySmhZV0k0Mi5qcGclMjIlMkMlMjJyZWRpcmVjdFVybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGc3BjLnJvdGFyeS5vcmclMkZwcm9qZWN0JTNGZ3VpZCUzRGQyODNkZDNjLWU2YTEtNDQxYy1iNTc2LWVjZjRmMWQ5OTdjYyUyNmxhbmclM0RlbiUyMiUyQyUyMnRpdGxlJTIyJTNBJTIySW50ZXItQ2x1YiUyMFlvdXRoJTIwRXhjaGFuZ2UlMjAoSUNZRSklMjIlMkMlMjJkZXNjcmlwdGlvbiUyMiUzQSUyMkFmcmljYW5zJTIwaW4lMjBJbmRpYSUyMGhhdmUlMjBzdG9yaWVzJTIwdG8lMjB0ZWxsJTJDJTIwdmFsdWVzJTIwdG8lMjBzaGFyZSUyQyUyIGFuZCUyMGElMjByaWNoJTIwaWRlbnRpdHklMjB0aGF0JTIwZGVzZXJ2ZXMlMjBhJTIwc3RhZ2UuJTIyJTdE" 
+                    <a href="https://spc.rotary.org/shareproject?input=JTdCJTIyaW1hZ2UlMjIlM0ElMjJodHRwcyUzQSUyRiUyRnNwYy5yb3Rhcnkub3JnJTJGYXp1cmVJbWFnZXMlMkYxNzQ5NjI1ODE4NjQwTVdZM01ESTNZMll0Wm1KbE9DMDBPVFl3TFdGbU1HWXROamcxT1dFeE0ySmhZV0k0Mi5qcGclMjIlMkMlMjJyZWRpcmVjdFVybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGc3BjLnJvdGFyeS5vcmclMkZwcm9qZWN0JTNGZ3VpZCUzRGQyODNkZDNjLWU2YTEtNDQxYy1iNTc2LWVjZjRmMWQ5OTdjYyUyNmxhbmclM0RlbiUyMiUyQyUyMnRpdGxlJTIyJTNBJTIySW50ZXItQ2x1YiUyMFlvdXRoJTIwRXhjaGFuZ2UlMjIlMjJkZXNjcmlwdGlvbiUyMiUzQSUyMkFmcmljYW5zJTIwaW4lMjBJbmRpYSUyMGhhdmUlMjBzdG9yaWVzJTIwdG8lMjB0ZWxsJTJDJTIwdmFsdWVzJTIwdG8lMjBzaGFyZSUyQyUyIGFuZCUyMGElMjByaWNoJTIwaWRlbnRpdHklMjB0aGF0JTIwZGVzZXJ2ZXMlMjBhJTIwc3RhZ2UuJTIyJTdE" 
                     target="Rotary Website" class="flex flex-col md:flex-row-reverse bg-gray-100 p-4 rounded shadow items-center md:w-11/12 mx-auto cursor-pointer transition hover:shadow-lg focus:outline-none" style="text-decoration: none;">
                         <div class="flex-shrink-0 w-full md:w-80 mb-4 md:mb-0 md:ml-6">
                             <img src="assets/icye.jpg" alt="Inter-Club Youth Exchange (ICYE) 2025 event image"
