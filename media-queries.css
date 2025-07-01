@@ -113,3 +113,59 @@ html {
 .bg-gray-100 {
     transition: box-shadow 0.2s, background 0.2s;
 }
+
+/* Hamburger menu and responsive navbar improvements */
+@media (max-width: 1028px) {
+    .navbar-links {
+        display: none !important;
+    }
+    #menu-btn {
+        display: flex !important;
+    }
+    #mobile-menu {
+        display: flex !important;
+    }
+}
+@media (min-width: 1029px) {
+    #menu-btn {
+        display: none !important;
+    }
+    #mobile-menu {
+        display: none !important;
+    }
+}
+
+/* Mobile menu dropdown (not fullscreen) */
+#mobile-menu {
+    z-index: 50;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 12rem;
+    min-width: 180px;
+    max-width: 90vw;
+    background: rgba(0,0,0,0.95);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    transition: transform 0.2s;
+    will-change: transform;
+    transform: scale(0);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem 1rem 1rem;
+}
+#mobile-menu.scale-100 {
+    transform: scale(1);
+}
+#mobile-menu.scale-0 {
+    transform: scale(0);
+}
+#mobile-menu .block {
+    width: 100%;
+}
+#close-menu-btn {
+    top: 0.25rem;
+    right: 0.5rem;
+}
+

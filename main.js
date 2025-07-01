@@ -29,9 +29,45 @@
 document.addEventListener('DOMContentLoaded', function () {
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    if (btn && menu) {
-        btn.addEventListener('click', function () {
-            menu.classList.toggle('hidden');
-        });
+    // Wait for close button to exist (in case of deferred script)
+    function getCloseBtn() {
+        return document.getElementById('close-menu-btn');
     }
+    // Open menu
+    function openMenu() {
+        menu.classList.remove('scale-0');
+        menu.classList.add('scale-100');
+        btn.setAttribute('aria-expanded', 'true');
+    }
+    // Close menu
+    function closeMenu() {
+        menu.classList.add('scale-0');
+        menu.classList.remove('scale-100');
+        btn.setAttribute('aria-expanded', 'false');
+    }
+    // Responsive: always show hamburger on <=1028px, hide mobile menu on >1028px
+    function handleResize() {
+        if (window.innerWidth > 1028) {
+            closeMenu();
+        }
+    }
+    if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openMenu();
+        });
+        // Use event delegation for close button in case of dynamic DOM
+        document.addEventListener('click', function(e) {
+            const closeBtn = getCloseBtn();
+            if (closeBtn && (e.target === closeBtn || closeBtn.contains(e.target))) {
+                closeMenu();
+            }
+        });
+        // Close menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        window.addEventListener('resize', handleResize);
+    }
+    handleResize();
 });
