@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>;
+    <meta name="google-site-verification" content="EsOm1ILAxFrPpBaI3IyUiXSpqjNOhIHcU1VUnGyOr1s"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rotaract Club of Umang</title>
@@ -20,8 +21,7 @@
                 menu.classList.toggle('hidden');
             });
         }
-    });
-    <meta name="google-site-verification" content="EsOm1ILAxFrPpBaI3IyUiXSpqjNOhIHcU1VUnGyOr1s" />
+    })
     </script>
     <script defer src="main.js"></script>
 </head>
@@ -47,9 +47,9 @@
                 <li><a href="members.html" class="hover:text-blue-300">Members</a></li>
                 <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
             </ul>
-            <!-- Mobile Nav (dropdown, not fullscreen) -->
-            <div id="mobile-menu" class="absolute top-full right-0 mt-2 w-48 bg-black bg-opacity-95 rounded shadow-lg flex-col items-start py-4 px-4 space-y-2 text-base text-white z-50 transform scale-0 transition-transform duration-200 origin-top-right md:hidden">
-                <button id="close-menu-btn" class="absolute top-2 right-2 text-2xl focus:outline-none" aria-label="Close Menu" type="button">&times;</button>
+            <!-- Mobile Nav (dropdown, overlays all content) -->
+            <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-95 rounded-none shadow-none flex-col items-start py-8 px-6 space-y-4 text-lg text-white z-50 transform scale-0 transition-transform duration-200 origin-top-right md:hidden">
+                <button id="close-menu-btn" class="absolute top-4 right-6 text-3xl focus:outline-none" aria-label="Close Menu" type="button">&times;</button>
                 <a href="#home" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Home</a>
                 <a href="projects.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Projects</a>
                 <a href="members.html" class="block py-2 px-2 rounded hover:bg-blue-900 hover:text-blue-300 transition">Members</a>
@@ -68,11 +68,11 @@
                 <div class="absolute inset-0 bg-black" style="opacity: 0.45;"></div>
             </div>
             <div class="hero-overlay relative z-10 text-center text-white p-8 rounded">
-                <span class="inline-block bg-blue-700 bg-opacity-80 px-6 py-2 rounded mb-4">
-                    <h2 class="text-4xl font-bold m-0 inline">Welcome to the Rotaract Club of Umang</h2>
-                </span>
+                <h2 class="text-4xl font-bold m-0 inline-block bg-blue-700 bg-opacity-80 px-4 py-2 rounded mb-4" style="display:inline-block;">
+                    Welcome to the Rotaract Club of Umang
+                </h2>
                 <br>
-                <span class="inline-block bg-blue-700 bg-opacity-80 px-6 py-2 rounded">
+                <span class="inline-block bg-blue-700 bg-opacity-80 px-4 py-2 rounded">
                     <p class="text-lg m-0 inline">Empowering communities, inspiring change, and fostering leadership.</p>
                 </span>
             </div>
