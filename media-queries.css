@@ -14,7 +14,24 @@
     }
     #menu-btn {
         display: flex !important;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+        z-index: 60;
     }
+    #menu-btn span {
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #D51067;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    #menu-btn span:nth-child(1) { top: 0; }
+    #menu-btn span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    #menu-btn span:nth-child(3) { bottom: 0; }
 }
 
 /* Medium to Small screens */
@@ -121,10 +138,26 @@ html {
     }
     #menu-btn {
         display: flex !important;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
         align-items: center;
         justify-content: center;
         z-index: 60;
     }
+    #menu-btn span {
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: #D51067;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    #menu-btn span:nth-child(1) { top: 0; }
+    #menu-btn span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    #menu-btn span:nth-child(3) { bottom: 0; }
     #mobile-menu {
         display: none !important;
     }
