@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // Open menu
     function openMenu() {
-        menu.classList.remove('scale-0');
+        menu.classList.remove('hidden', 'scale-0');
         menu.classList.add('scale-100');
         btn.setAttribute('aria-expanded', 'true');
     }
@@ -43,18 +43,26 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeMenu() {
         menu.classList.add('scale-0');
         menu.classList.remove('scale-100');
+        setTimeout(() => menu.classList.add('hidden'), 200); // Match transition duration
         btn.setAttribute('aria-expanded', 'false');
     }
     // Responsive: always show hamburger on <=1028px, hide mobile menu on >1028px
     function handleResize() {
         if (window.innerWidth > 1028) {
             closeMenu();
+            menu.classList.add('hidden');
+        } else {
+            menu.classList.remove('hidden');
         }
     }
     if (btn && menu) {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
-            openMenu();
+            if (menu.classList.contains('scale-0')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
         });
         // Use event delegation for close button in case of dynamic DOM
         document.addEventListener('click', function(e) {
@@ -66,6 +74,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Close menu when clicking a link
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMenu);
+        });
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!menu.contains(e.target) && !btn.contains(e.target) && menu.classList.contains('scale-100')) {
+                closeMenu();
+            }
         });
         window.addEventListener('resize', handleResize);
     }
